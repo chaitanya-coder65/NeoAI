@@ -1,0 +1,344 @@
+{
+    "generated_at_utc": "2026-11-12T12:13:45.168005+00:00",
+    "status": "HEALTHY",
+    "alerts": {
+        "data_drift": false,
+        "performance_degradation": false
+    },
+    "model_evaluation": {
+        "model_name": "LogisticRegression",
+        "new_batch_rows": 200,
+        "positive_class": "benign (1)",
+        "metrics": {
+            "accuracy": 0.97,
+            "precision": 0.9917355371900827,
+            "recall": 0.96,
+            "f1_score": 0.975609756097561,
+            "roc_auc": 0.9954133333333334
+        },
+        "baseline_metrics": {
+            "accuracy": 0.956140350877193,
+            "precision": 0.9855072463768116,
+            "recall": 0.9444444444444444,
+            "f1_score": 0.9645390070921985,
+            "roc_auc": 0.9953703703703703
+        },
+        "new_batch_metrics": {
+            "accuracy": 0.97,
+            "precision": 0.9917355371900827,
+            "recall": 0.96,
+            "f1_score": 0.975609756097561,
+            "roc_auc": 0.9954133333333334
+        },
+        "metric_comparison": {
+            "accuracy": {
+                "baseline": 0.956140350877193,
+                "new_batch": 0.97,
+                "difference": 0.013859649122807016
+            },
+            "precision": {
+                "baseline": 0.9855072463768116,
+                "new_batch": 0.9917355371900827,
+                "difference": 0.006228290813271031
+            },
+            "recall": {
+                "baseline": 0.9444444444444444,
+                "new_batch": 0.96,
+                "difference": 0.015555555555555545
+            },
+            "f1_score": {
+                "baseline": 0.9645390070921985,
+                "new_batch": 0.975609756097561,
+                "difference": 0.011070749005362424
+            },
+            "roc_auc": {
+                "baseline": 0.9953703703703703,
+                "new_batch": 0.9954133333333334,
+                "difference": 4.296296296302238e-05
+            }
+        },
+        "f1_drop": -0.011070749005362424,
+        "f1_drop_threshold": 0.05,
+        "performance_alert": false
+    },
+    "data_drift": {
+        "method": "Kolmogorov-Smirnov two-sample test",
+        "total_features": 30,
+        "drifted_features": 2,
+        "drift_percentage": 6.67,
+        "drift_detected": false,
+        "feature_results": [
+            {
+                "feature": "area error",
+                "ks_statistic": 0.0507557117750439,
+                "p_value": 0.8170890283750631,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "compactness error",
+                "ks_statistic": 0.03446397188049222,
+                "p_value": 0.9915013883925274,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "concave points error",
+                "ks_statistic": 0.03963971880492084,
+                "p_value": 0.9651674588673947,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "concavity error",
+                "ks_statistic": 0.04855008787346221,
+                "p_value": 0.8554785129634733,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "fractal dimension error",
+                "ks_statistic": 0.04909490333919164,
+                "p_value": 0.8463304855137467,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "mean area",
+                "ks_statistic": 0.11369947275922665,
+                "p_value": 0.03962775744612773,
+                "drift_detected": true,
+                "status": "drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "mean compactness",
+                "ks_statistic": 0.039446397188049265,
+                "p_value": 0.9665656025378689,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "mean concave points",
+                "ks_statistic": 0.05349736379613357,
+                "p_value": 0.7653898475764775,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "mean concavity",
+                "ks_statistic": 0.045500878734622136,
+                "p_value": 0.9018924604125526,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "mean fractal dimension",
+                "ks_statistic": 0.07706502636203871,
+                "p_value": 0.3228693850068972,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "mean perimeter",
+                "ks_statistic": 0.11864674868189803,
+                "p_value": 0.028057670053419047,
+                "drift_detected": true,
+                "status": "drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "mean radius",
+                "ks_statistic": 0.10050087873462213,
+                "p_value": 0.09265636520110172,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "mean smoothness",
+                "ks_statistic": 0.05203866432337445,
+                "p_value": 0.7934443524777697,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "mean symmetry",
+                "ks_statistic": 0.0598945518453427,
+                "p_value": 0.6360283510568435,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "mean texture",
+                "ks_statistic": 0.05515817223198588,
+                "p_value": 0.7327059546246524,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "perimeter error",
+                "ks_statistic": 0.04315465729349732,
+                "p_value": 0.9316846222778797,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "radius error",
+                "ks_statistic": 0.06048330404217922,
+                "p_value": 0.6239328781667708,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "smoothness error",
+                "ks_statistic": 0.08443760984182774,
+                "p_value": 0.2261658171696704,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "symmetry error",
+                "ks_statistic": 0.05807557117750439,
+                "p_value": 0.6732888778517504,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "texture error",
+                "ks_statistic": 0.030984182776801428,
+                "p_value": 0.9978654252943001,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "worst area",
+                "ks_statistic": 0.0673813708260105,
+                "p_value": 0.4869485669148259,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "worst compactness",
+                "ks_statistic": 0.046168717047451735,
+                "p_value": 0.8924238977761132,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "worst concave points",
+                "ks_statistic": 0.06785588752196836,
+                "p_value": 0.47808837069286353,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "worst concavity",
+                "ks_statistic": 0.05040421792618632,
+                "p_value": 0.823421551289364,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "worst fractal dimension",
+                "ks_statistic": 0.09281195079086119,
+                "p_value": 0.14484484932378372,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "worst perimeter",
+                "ks_statistic": 0.058866432337434105,
+                "p_value": 0.657092781785582,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "worst radius",
+                "ks_statistic": 0.06710896309314585,
+                "p_value": 0.4921150409022525,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "worst smoothness",
+                "ks_statistic": 0.05988576449912131,
+                "p_value": 0.6362607684994575,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "worst symmetry",
+                "ks_statistic": 0.052644991212653786,
+                "p_value": 0.7818804053509975,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            },
+            {
+                "feature": "worst texture",
+                "ks_statistic": 0.0672934973637962,
+                "p_value": 0.4885736907446087,
+                "drift_detected": false,
+                "status": "no_drift_detected",
+                "baseline_missing": 0,
+                "new_batch_missing": 0
+            }
+        ]
+    },
+    "data_note": "The incoming batch is simulated from the reference dataset. Its retained labels are used only to demonstrate offline monitoring; they are not independently collected production outcomes."
+}

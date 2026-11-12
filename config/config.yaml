@@ -1,0 +1,18 @@
+project:
+  name: "MLOps Model Monitoring and Data Drift Dashboard"
+  random_state: 42
+dataset:
+  name: "Breast Cancer Wisconsin"
+  target_column: "target"
+  test_size: 0.20
+model:
+  name: "RandomForestClassifier"
+  n_estimators: 100
+  max_depth: 8
+  random_state: 42
+monitoring:
+  significance_level: 0.05
+  drift_share_threshold: 0.30
+mlflow:
+  tracking_uri: "sqlite:///mlflow.db"
+  experiment_name: "MLOps_Model_Monitoring"

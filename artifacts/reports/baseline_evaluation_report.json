@@ -1,0 +1,29 @@
+{
+    "evaluation_type": "baseline_holdout_test_evaluation",
+    "model_name": "LogisticRegression",
+    "test_samples": 114,
+    "positive_class": "benign (1)",
+    "metrics": {
+        "accuracy": 0.956140350877193,
+        "precision": 0.9855072463768116,
+        "recall": 0.9444444444444444,
+        "f1_score": 0.9645390070921985,
+        "roc_auc": 0.9953703703703703
+    },
+    "confusion_matrix": {
+        "labels": [
+            "malignant (0)",
+            "benign (1)"
+        ],
+        "values": [
+            [
+                41,
+                1
+            ],
+            [
+                4,
+                68
+            ]
+        ]
+    }
+}

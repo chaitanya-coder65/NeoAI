@@ -1,0 +1,8 @@
+{
+    "selected_model": "LogisticRegression",
+    "test_accuracy": 0.956140350877193,
+    "test_precision": 0.9855072463768116,
+    "test_recall": 0.9444444444444444,
+    "test_f1": 0.9645390070921985,
+    "test_roc_auc": 0.9953703703703703
+}

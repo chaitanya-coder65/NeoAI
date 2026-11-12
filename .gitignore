@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+environment-lock.txt
+
+# IDE
+.vscode/
+.idea/
+
+# MLflow / local tracking
+mlruns/
+mlflow.db
+
+# Logs
+*.log
+
+# Keep artifact directories, but ignore large generated binaries by default.
+artifacts/models/*.pkl
+artifacts/models/*.joblib
+
+# Keep report and dataset CSVs only when intentionally added.
