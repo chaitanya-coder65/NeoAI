@@ -48,6 +48,14 @@ Drift and performance degradation are shown as separate monitoring signals. A dr
 
 ![Alerts and recommendations](screenshots/07_alerts_recommendations.png)
 
+### 7. MLflow experiment tracking
+
+MLflow records the model-training experiments, including the cross-validation runs for the candidate classifiers and the final selected-model run. The screenshot below shows the `MLOps_Model_Monitoring` experiment and its recorded runs in the local MLflow UI.
+
+![MLflow experiment tracking](screenshots/09_mlflow_experiment_tracking.png)
+
+The MLflow interface shown here is running locally. Its address (`http://127.0.0.1:5000`) is not a public link and cannot be opened by an external reviewer on another computer. The repository README provides the command to start the MLflow UI locally.
+
 ### 6. Understanding results
 
 The dashboard includes a plain-language guide to metrics, drift, KS statistics, p-values, charts, alerts, and the limitations of the simulated batch.
@@ -347,6 +355,7 @@ Verify the repository:
 - [x] Seven automated tests passed in the recorded test run.
 - [ ] Random seeds and environment versions are recorded.
 - [x] Dashboard screenshots are included in this README and `screenshots/`.
+- [x] MLflow experiment-tracking screenshot is included in this README and `screenshots/`.
 - [ ] README setup and run commands have been checked in a fresh environment.
 - [ ] GitHub repository is public or shared with the evaluator.
 - [ ] No secrets, credentials, or unintended files are committed.
